@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    header.main-header
+        div.navbar.navbar-fixed-top: div.navbar-inner
+            div.container
+                a(href='/', class='brand')= title
+    div(class='main-content', ng-view)
+
+    footer.main-footer

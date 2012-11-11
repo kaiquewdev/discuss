@@ -1,0 +1,13 @@
+doctype 5
+html(ng-app='discuss')
+  head
+    title= title
+    link(rel='stylesheet', href='/style/bootstrap/bootstrap.min.css')
+    link(rel='stylesheet', href='/style/style.css')
+  body
+    block content
+    block scripts
+        script(src='/js/libs/jquery.min.js')
+        script(src='/js/libs/angular.min.js')
+        script(src='/js/app-discuss.js')
+        script(src='/js/controllers-discuss.js')

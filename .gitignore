@@ -1,0 +1,4 @@
+app/keltc.json
+app/node_modules/
+node_modules/
+*.sw*
