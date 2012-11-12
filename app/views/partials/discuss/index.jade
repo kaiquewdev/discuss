@@ -1,1 +1,35 @@
-h1 Partials working!
+div.row-fluid
+    div.span12
+        div.span4
+            div.navbar
+                div.navbar-inner
+                    a.brand Project: {{project.name}} 
+        div.span6
+            header
+                div.row-fluid.well.span12
+                    div.span12(style="margin:0 10px;") 
+                        div.row
+                            textarea(
+                                style="width:578px; height:80px",
+                                ng-model="message",
+                                name="message"
+                            )
+
+                        div.row
+                            button(
+                                class="btn btn-inverse pull-right",
+                                ng-click="sendMessage()"
+                            ) Send 
+
+                            button(
+                                class="btn pull-left",
+                                ng-click="showFilePicker()"
+                            ) Upload
+
+            div.wall-body.row-fluid
+                div.span12
+                    article.well(ng-repeat="post in project.wall")
+                        div.wall-postv {{post.body}}
+                        hr
+                        a.wall-post-author(href="#") 
+                            span.label.label-inverse {{post.author}}
